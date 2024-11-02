@@ -1,57 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-  	<title>Login 09</title>
+
+<head>
+
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <title>SB Admin 2 - Login</title>
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<link rel="stylesheet" href="/login5N/css/style.css">
+    <!-- Custom fonts for this template-->
+    <link href="/sbadmin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="/sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-primary">
+    <div class="container">
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image">
+                                <br/>
+                                <img src="/sbadmin/logo.png" width="70%">
+                            </div>
 
-	</head>
-	<body>
-	<section class="ftco-section">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">APLIKASI SISTEM KEPEGAWAIAN</h2>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-md-6 col-lg-4">
-					<div class="login-wrap py-5">
-		      	<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/login5N/images/bg.jpg);"></div>
-		      	<h3 class="text-center mb-0">Login</h3>
-		      	<p class="text-center">Silahkan Masukkan Username dan Password</p>
-                    <form method="POST" action="/login">
-                        <div class="form-group">
-                            <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-user"></span></div>
-                            <input type="text" name="username" class="form-control" placeholder="Username" required>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">LOGIN INVENTARIS</h1>
+                                    </div>
+
+                                    {{-- form login --}}
+                                    <form class="user" action="/login" method="POST">                                        
+                                        @csrf
+
+                                        <div class="form-group">
+                                            <input type="text" name="username" class="form-control form-control-user">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="password" class="form-control form-control-user">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                                            Login
+                                        </button>
+                                    </form>
+                                    {{-- --------------------------- --}}
+
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-lock"></span></div>
-                            <input type="password" name="password" class="form-control" placeholder="Password" required>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn form-control btn-primary rounded submit px-3">Masuk</button>
-                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    </form>
-              
-	        </div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- Bootstrap core JavaScript-->
+    <script src="/sbadmin/vendor/jquery/jquery.min.js"></script>
+    <script src="/sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-	<script src="/login5N/js/jquery.min.js"></script>
-  <script src="/login5N/js/popper.js"></script>
-  <script src="/login5N/js/bootstrap.min.js"></script>
-  <script src="/login5N/js/main.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="/sbadmin/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-	</body>
+    <!-- Custom scripts for all pages-->
+    <script src="/sbadmin/js/sb-admin-2.min.js"></script>
+
+</body>
+
 </html>
-
